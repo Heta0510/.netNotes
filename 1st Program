@@ -1,0 +1,36 @@
+We have to make Main() as static,as no class object will call the method Main(),as Main() is the entry point to the program as control comes automatically into this.
+You can create object to the class, as
+class_name object =  new class_name();
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace HelloWorld
+{
+    class Data
+    {
+        public void Sravan()
+        {
+            Console.WriteLine("Hii I M Sravan...");
+        }
+        internal void Shivam()
+        {
+            Console.WriteLine("Hii I m Shivam...");
+        }
+        private void Lokesh()
+        {
+            Console.WriteLine("Hii I m Lokesh...");
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Data obj = new Data();
+            obj.Sravan();
+            obj.Shivam();
+        }
+    }
+}
