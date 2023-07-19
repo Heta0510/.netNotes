@@ -109,7 +109,105 @@ namespace Max3
    For every loop, there are 3 phases as:
     (i)Initialization: Initialization performed at the begining of the loop.
     (ii)Condition:Condition performed at the conditional part of the loop.
-    (iii)Increment/Decrement:Increament or Decrement performed 
+    (iii)Increment/Decrement:Increament or Decrement performed before closing the loop.
+Syntx:
+while(condition){
+statements(s);
+}
 
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+namespace Fact
+{
+    class Program
+    {
+        public void Calc(int n)
+        {
+            int f = 1;
+            int i = 1;
+            while (i <= n)
+            {
+                f = f * i;
+                i++;
+            }
+            Console.WriteLine("Factorial Value is "+f);
+        }
+        static void Main(string[] args)
+        {
+            int n;
+            Console.WriteLine("Enter N Value ");
+            n = Convert.ToInt32(Console.ReadLine());
+            Program obj = new Program();
+            obj.Calc(n); 
+        }
+    }
+}
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+namespace EvenShow
+{
+    class Program
+    {
+        public void Show(int n)
+        {
+            int i = 0;
+            while (i <= n)
+            {
+                i = i + 2;
+                Console.WriteLine("Even "+i);
+            }
+        }
+        static void Main(string[] args)
+        {
+            int n;
+            Console.WriteLine("Enter N value ");
+            n = Convert.ToInt32(Console.ReadLine());
+            Program obj = new Program();
+            obj.Show(n);
+        }
+    }
+}
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+namespace LoopDemo
+{
+    class Program
+    {
+        public void Show(int n)
+        {
+            int i = 0;
+            while (i <= n)
+            {
+                Console.WriteLine("Welcome to Dotnet...");
+                i++;
+            }
+        }
+        static void Main(string[] args)
+        {
+            int n;
+            Console.WriteLine("Enter n value ");
+            n = Convert.ToInt32(Console.ReadLine());
+            Program obj = new Program();
+            obj.Show(n);
+        }
+    }
+}
+
+
+For Loop:This loop executes all the statements repeatedly until the condition remains true.If condition remains false then it comes out of the loop.
+for(Initialize;condition;Increment/Decrement){
+Statement(s);
+}
 
 
