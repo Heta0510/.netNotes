@@ -1,0 +1,115 @@
+Control Structure: Used to define the flow of program.
+There are 2 types of control structure known as 
+(i) Branching
+   If...else : Used to execute statement based on condition.
+   if(conditions){
+      statement(s);
+   }else{
+      statement(s);
+   }
+example:
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+namespace PosNeg
+{
+    class Program
+    {
+        public void Check(int N)
+        {
+            if (N >= 0)
+            {
+                Console.WriteLine("Positive Number...");
+            }
+            else
+            {
+                Console.WriteLine("Negative Number...");
+            }
+        }
+        static void Main(string[] args)
+        {
+            int N;
+            Console.WriteLine("Enter negative value ");
+            N = Convert.ToInt32(Console.ReadLine());
+            Program obj = new Program();
+            obj.Check(N);
+        }
+    }
+}
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+namespace EvenOdd
+{
+    class Program
+    {
+        public void Check(int num)
+        {
+            if (num % 2 == 0)
+            {
+                Console.WriteLine("Number is Even...");
+            }
+            else
+            {
+                Console.WriteLine("Number is Odd...");
+            }
+        }
+        static void Main(string[] args)
+        {
+            int num;
+            Console.WriteLine("Enter Number ");
+            num = Convert.ToInt32(Console.ReadLine());
+            Program obj = new Program();
+            obj.Check(num);
+        }
+    }
+}
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+namespace Max3
+{
+    class Program
+    {
+        public void Check(int a, int b, int c)
+        {
+            int m = a;
+            if (m < b) {
+                m = b;
+            }
+            if (m < c)
+            {
+                m = c;
+            }
+            Console.WriteLine("Maximum value is "+m);
+        }
+        static void Main(string[] args)
+        {
+            int a, b, c;
+            Console.WriteLine("Enter 3 Numbers ");
+            a = Convert.ToInt32(Console.ReadLine());
+            b = Convert.ToInt32(Console.ReadLine());
+            c = Convert.ToInt32(Console.ReadLine());
+            Program obj = new Program();
+            obj.Check(a, b, c);
+        }
+    }
+}
+
+(ii) Looping Control Structure:
+   WhileLoop:This loop executes all the statement repeatedly until the condition remains true, if the condition remains false, then its come out of the loop.
+   For every loop, there are 3 phases as:
+    (i)Initialization: Initialization performed at the begining of the loop.
+    (ii)Condition:Condition performed at the conditional part of the loop.
+    (iii)Increment/Decrement:Increament or Decrement performed 
+
+
+
