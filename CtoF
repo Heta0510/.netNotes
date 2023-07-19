@@ -1,0 +1,25 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace CtoF
+{
+    class Program
+    {
+        public void Calc(double c)
+        {
+            double f = ((9 * c) / 5) + 32;
+            Console.WriteLine("Fahrenheit value is " + f);
+        }
+        static void Main(string[] args)
+        {
+            double c;
+            Console.WriteLine("Enter centigrade value ");
+            c = Convert.ToDouble(Console.ReadLine());
+            Program obj = new Program();
+            obj.Calc(c);
+        }
+    }
+}
