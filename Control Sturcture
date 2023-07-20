@@ -209,5 +209,72 @@ For Loop:This loop executes all the statements repeatedly until the condition re
 for(Initialize;condition;Increment/Decrement){
 Statement(s);
 }
+Example:
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+namespace Factors
+{
+    class Program
+    {
+        public void Factors(int n)
+        {
+            for (int i = 1; i < n; i++)
+            {
+                if (n % i == 0)
+                {
+                    Console.WriteLine("Factor "+i);
+                }
+            }
+        }
+        static void Main(string[] args)
+        {
+            int n;
+            Console.WriteLine("Enter N Value ");
+            n = Convert.ToInt32(Console.ReadLine());
+            Program obj = new Program();
+            obj.Factors(n);
+        }
+    }
+}
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+namespace PrimeEx
+{
+    class Program
+    {
+        public void Check(int n)
+        {
+            bool flag = false;
+            for (int i = 2; i < n; i++)
+            {
+                if (n%i == 0)
+                {
+                    flag = true;
+                }
+            }
+            if (flag == true)
+            {
+                Console.WriteLine("Prime Number  ");
+            }
+            else {
+                Console.WriteLine("Not Prime Number ");
+            }
+        }
+        static void Main(string[] args)
+        {
+            int n = 6;
+            Program obj = new Program();
+            obj.Check(n);
+        }
+    }
+}
+
 
 
