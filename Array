@@ -1,1 +1,167 @@
+Array: An array is the finite ordered set of homogeneous elements, means all the elements belongs to same datatypes. All elements of array are stored in successive memory location.
+int[] a = new int[]{1,2,3,4,5};
+a[0]=1;
+a[1]=2;
+a[2]=3;
+a[3]=4;
+a[4]=5;
+
+example:
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+namespace ArrayDemo
+{
+    class Program
+    {
+        public void show() 
+        {
+            int[] a = new int[] { 23, 4, 57, 56, 34, 23 };
+            //for (int i = 0; i < a.Length; i++)
+            //{
+            //    Console.WriteLine(a[i]);
+            //}
+            foreach (int i in a)
+            {
+                Console.WriteLine(i);
+            }
+            Console.WriteLine();
+        }
+        static void Main(string[] args)
+        {
+            Program obj = new Program();
+            obj.show();
+        }
+    }
+}
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+namespace StrArray
+{
+    class Program
+    {
+        public void Show()
+        {
+            string[] names = new string[]
+            {
+                "Loksh","Sahil","Shivam","Vikas"
+            };
+            foreach (string s in names)
+            {
+                Console.WriteLine(s);
+            }
+        }
+        static void Main(string[] args)
+        {
+            Program obj = new Program();
+            obj.Show();
+        }
+    }
+}
+
+In Dotnet string are immutable means once they are assigned we cannot change by using any string methods.
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+namespace StrEx
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string str = "Hello";
+            str.Insert(5, "World");
+            Console.WriteLine(str);
+            Console.ReadLine();
+        }
+    }
+}
+
+There are 3 types of parameters as
+1)in
+2)ref
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace FactRef
+{
+    class Program
+    {
+        public void Calc(int n, ref int f)
+        {
+            for (int i = 1; i < n; i++)
+            {
+                f = f * i;
+            }
+        }
+        static void Main(string[] args)
+        {
+            int n,f;
+            f = 1;
+            Console.WriteLine("Enter N value ");
+            n = Convert.ToInt32(Console.ReadLine());
+            Program obj = new Program();
+            obj.Calc(n, ref f);
+            Console.WriteLine("Factorial Value "+f);
+        }
+    }
+}
+3)out: If you want to return more than one value to the corresponding function then we need the help out parameter.
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+namespace OutEx
+{
+    class Employee
+    {
+        public void Show(int empno, out string name, out double basic)
+        {
+            if (empno == 1)
+            {
+                name = "Lokesh";
+                basic = 88345;
+            }
+            else if (empno == 3)
+            {
+                name = "Shivam";
+                basic = 8845;
+            }
+            else {
+                name = "Not Found";
+                basic = 0;
+            }
+        }
+        static void Main(string[] args)
+        {
+            int empno;
+            string name;
+            double basic;
+            Console.WriteLine("Enter Employee Number ");
+            empno = Convert.ToInt32(Console.ReadLine());
+            Employee emp = new Employee();
+            emp.Show(empno, out name, out basic);
+            Console.WriteLine("Name is "+name);
+            Console.WriteLine("Basic is "+basic);
+            Console.ReadLine();
+        }
+    }
+}
+
+
+
+
+
 
