@@ -1,0 +1,90 @@
+How foreach() loop will work internally?
+it contrains the collection an enumerator()
+and first i targets to the first element in Array a.Ater processing first element, it checks next element is there or not by using
+hasMoreElements() method.
+If it returns true, then it moves to next element by using nextElement()
+It repeats as soon  as hasMoreElements() return true.
+There are 2 types of memories as 
+1)STACK
+2)HEAP
+Value type will be stored in STACK memory, and reference types will be stored in HEAP memory.
+
+Example:
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+namespace Quiz2
+{
+    class Demo
+    {
+        int n;
+        static void Main(string[] args)
+        {
+            Demo obj1 = new Demo();
+            obj1.n = 12;
+            Demo obj2 = obj1;
+            obj2.n = 13;
+            Console.WriteLine(obj2.n);
+            Console.WriteLine(obj1.GetHashCode());
+            Console.WriteLine(obj2.GetHashCode());
+        }
+    }
+}
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+namespace StrDemo
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string s1 = "Lokesh", s2 = "Sahil", s3 = "Shivam", s4 = "Ankit";
+            Console.WriteLine(s1.GetHashCode());
+            Console.WriteLine(s2.GetHashCode());
+            Console.WriteLine(s3.GetHashCode());
+            Console.WriteLine(s4.GetHashCode());
+        }
+    }
+}
+
+show(string name){
+...
+...
+}
+show();
+show("Lokesh","Shivam");
+show("Lokesh","Shivam","Sahil");
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+namespace ParamsDemo
+{
+    class Program
+    {
+        public void Show(params string[] name)
+        {
+            foreach (string s in name)
+            {
+                Console.Write(s+" ");
+            }
+            Console.WriteLine();
+        }
+        static void Main(string[] args)
+        {
+            Program obj = new Program();
+            obj.Show();
+            obj.Show("Lokesh");
+            obj.Show("Lokesh", "Shivam");
+            obj.Show("Lokesh", "Shivam", "Sahil");
+        }
+    }
+}
+
