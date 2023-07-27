@@ -1,0 +1,45 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Array
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] array = { 1, 5, 15, 25 };
+
+            //HashSet<Integer> numberSet = new HashSet<Integer>();
+            List<int> missingNumbers = new List<int>();
+
+            for (int i = 0; i < array.Length - 1; i++)
+            {
+                int a = array[i];
+                int b = array[i + 1];
+
+                int c = b - a;
+
+                if (c > 1)
+                {
+                    int d = a + 1;
+                    for (int j = 1; j < c; j++)
+                    {
+                        missingNumbers.Add(d);
+                        d++;
+                    }
+                }
+
+            }
+            Console.WriteLine("Missing Numbers:");
+            foreach (int num in missingNumbers)
+            {
+                Console.Write(num + " ");
+            }
+
+        }
+       
+    }
+}
